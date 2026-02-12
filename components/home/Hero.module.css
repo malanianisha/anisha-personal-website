@@ -1,0 +1,126 @@
+.wrap {
+    padding-top: 2.5rem;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1.25fr 0.85fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  
+  .left {
+    max-width: 680px;
+  }
+  
+  .kicker {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+  }
+  
+  .title {
+    font-size: clamp(2.6rem, 4.2vw, 3.7rem);
+    font-weight: 600;
+    line-height: 1.07;
+  }
+  
+  .subtitle {
+    margin-top: 1.25rem;
+    font-size: 1.05rem;
+    max-width: 62ch;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    margin-top: 2.25rem;
+    flex-wrap: wrap;
+  }
+  
+  .primary {
+    background: linear-gradient(180deg, rgba(79,70,229,1), rgba(67,56,202,1));
+    color: white;
+    padding: 0.9rem 1.35rem;
+    border-radius: 999px;
+    box-shadow: var(--shadow);
+    font-weight: 500;
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+    transition: transform 180ms ease, filter 180ms ease;
+  }
+  
+  .primary:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.02);
+  }
+  
+  .secondary {
+    font-weight: 500;
+    color: var(--fg);
+    opacity: 0.9;
+  }
+  
+  .secondary:hover {
+    color: var(--accent);
+  }
+  
+  .tertiary {
+    color: var(--muted);
+    font-weight: 500;
+  }
+  
+  .tertiary:hover {
+    color: var(--fg);
+  }
+  
+  .card {
+    border: 1px solid var(--border);
+    background: var(--card);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius);
+    padding: 1.6rem 1.6rem 1.2rem;
+    box-shadow: var(--shadow);
+  }
+  
+  .cardTitle {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.15rem;
+  }
+  
+  .row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 1rem;
+    padding: 0.85rem 0;
+    border-top: 1px solid var(--border);
+  }
+  
+  .row:first-of-type {
+    border-top: none;
+  }
+  
+  .label {
+    font-size: 0.86rem;
+    color: var(--muted);
+  }
+  
+  .value {
+    font-size: 0.95rem;
+    color: var(--fg);
+    opacity: 0.92;
+  }
+  
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
