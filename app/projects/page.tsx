@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import ProjectsClient from "./ProjectsClient";
 
 export const metadata: Metadata = {
@@ -7,5 +8,9 @@ export const metadata: Metadata = {
 };
 
 export default function ProjectsPage() {
-  return <ProjectsClient />;
+  return (
+    <Suspense fallback={<div className="section">Loading projects...</div>}>
+      <ProjectsClient />
+    </Suspense>
+  );
 }
