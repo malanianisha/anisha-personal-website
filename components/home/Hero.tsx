@@ -94,7 +94,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            Web Developer / Front-End Engineer
+            Full Stack Developer
           </motion.p>
           <motion.h1
             className="min-h-[5.5rem] font-display text-4xl tracking-tight sm:min-h-[6.5rem] sm:text-5xl lg:min-h-[7.5rem] lg:text-6xl"
