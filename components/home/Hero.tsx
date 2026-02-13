@@ -149,7 +149,7 @@ export function Hero() {
                 />
               ) : null}
               <Button href="/contact" variant="primary">
-                Let's connect <ArrowUpRight size={16} />
+                Let&apos;s connect <ArrowUpRight size={16} />
               </Button>
             </motion.div>
             <Link

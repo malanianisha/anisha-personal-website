@@ -107,7 +107,7 @@ export default function AboutPage() {
                 View resume
               </Link>
               <a href={`mailto:${EMAIL}`} className="btn btn-primary">
-                Let's connect
+                Let&apos;s connect
               </a>
               <Link href="/projects" className="btn btn-ghost">
                 View projects
@@ -142,7 +142,7 @@ export default function AboutPage() {
         <Reveal className="mt-14">
           <div className="section-heading">
             <p className="eyebrow">Experience</p>
-            <h2 className="headline">Where I've learned and grown.</h2>
+            <h2 className="headline">Where I&apos;ve learned and grown.</h2>
             <p className="lede max-w-2xl">
               Roles that blend product thinking, engineering collaboration, and high-quality visual execution.
             </p>

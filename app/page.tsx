@@ -49,9 +49,9 @@ export default function HomePage() {
               <p className="eyebrow">My work</p>
               <div className="flex flex-wrap items-end justify-between gap-4">
                 <div>
-                  <h2 className="headline">Projects I've built recently.</h2>
+                  <h2 className="headline">Projects I&apos;ve built recently.</h2>
                   <p className="lede max-w-2xl">
-                    A few builds I'm proud of, with small notes on what I learned along the way.
+                    A few builds I&apos;m proud of, with small notes on what I learned along the way.
                   </p>
                   <SectionDivider className="mt-4" />
                 </div>
@@ -87,7 +87,7 @@ export default function HomePage() {
             </div>
             <div className="flex flex-wrap gap-3">
               <Button href="/contact" variant="primary">
-                Let's connect
+                Let&apos;s connect
               </Button>
             </div>
           </ScrollReveal>

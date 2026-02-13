@@ -74,7 +74,7 @@ export default function ProjectsClient() {
       <Container className="section">
         <Reveal className="section-heading">
           <p className="eyebrow">Projects</p>
-          <h1 className="headline">Projects I've built so far.</h1>
+          <h1 className="headline">Projects I&apos;ve built so far.</h1>
           <p className="lede max-w-2xl">
             A mix of classwork, internships, and personal builds with notes on what I learned along the way.
           </p>

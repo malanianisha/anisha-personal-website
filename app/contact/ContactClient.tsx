@@ -56,7 +56,7 @@ export default function ContactClient() {
       />
       <Container className="section">
         <Reveal className="section-heading">
-          <p className="eyebrow">Let's connect</p>
+          <p className="eyebrow">Let&apos;s connect</p>
           <h1 className="headline">Let’s build something thoughtful.</h1>
           <p className="lede max-w-2xl">
             Share a quick overview and I’ll respond with timelines, next steps, and how I can help.
