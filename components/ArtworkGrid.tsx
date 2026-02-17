@@ -15,7 +15,7 @@ export function ArtworkGrid({ items }: ArtworkGridProps) {
   return (
     <>
       <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
-        {items.map((piece, idx) => {
+        {items.map((piece) => {
           return (
           <button
             key={piece.slug}
