@@ -60,7 +60,7 @@ npm run start
 
 ## Assets
 
-- Resume: `public/Anisha_Malani_Resume_DA2025.pdf`
+- Resume: `public/Anisha Malani Resume.pdf`
 - Open Graph image: `public/og-image.jpg`
 - Favicon: `public/favicon.svg`
 

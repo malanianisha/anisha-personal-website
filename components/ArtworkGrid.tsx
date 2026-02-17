@@ -11,19 +11,11 @@ type ArtworkGridProps = {
 
 export function ArtworkGrid({ items }: ArtworkGridProps) {
   const [active, setActive] = useState<Artwork | null>(null);
-  const tileAspects = [
-    "aspect-[4/3]",
-    "aspect-[3/4]",
-    "aspect-[5/4]",
-    "aspect-[4/5]",
-    "aspect-square",
-  ];
 
   return (
     <>
       <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
         {items.map((piece, idx) => {
-          const aspect = piece.aspect ?? tileAspects[idx % tileAspects.length];
           return (
           <button
             key={piece.slug}
@@ -31,13 +23,15 @@ export function ArtworkGrid({ items }: ArtworkGridProps) {
             onClick={() => setActive(piece)}
             className="gallery-tile group mb-6 w-full break-inside-avoid text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
-            <div className={`gallery-frame relative w-full overflow-hidden ${aspect}`}>
+            <div className="gallery-frame relative w-full overflow-hidden">
               <Image
                 src={piece.image}
                 alt={piece.title}
-                fill
+                width={piece.width}
+                height={piece.height}
                 sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                className="object-cover transition duration-500 group-hover:scale-105"
+                className="h-auto w-full transition duration-500 group-hover:brightness-105"
+                unoptimized
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 transition group-hover:opacity-95" />
               {piece.description && (
@@ -89,6 +83,7 @@ export function ArtworkGrid({ items }: ArtworkGridProps) {
                 fill
                 sizes="(min-width: 1024px) 60vw, 100vw"
                 className="object-contain"
+                unoptimized
               />
             </div>
             <div className="space-y-1 p-4">

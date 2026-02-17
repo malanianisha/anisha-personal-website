@@ -159,7 +159,7 @@ export function Hero() {
               View projects
             </Link>
             <a
-              href="/Anisha_Malani_Resume_DA2025.pdf"
+              href="/Anisha Malani Resume.pdf"
               download
               className="text-sm font-semibold text-muted transition hover:text-foreground"
             >

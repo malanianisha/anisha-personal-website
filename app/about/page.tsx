@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "About Anisha Malani and the front-end engineering values behind the portfolio.",
 };
 
-const RESUME_URL = "/Anisha_Malani_Resume_DA2025.pdf";
+const RESUME_URL = "/Anisha Malani Resume.pdf";
 const EMAIL = "malanianisha@gmail.com";
 
 const principles = [

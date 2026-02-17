@@ -108,6 +108,8 @@ export const projects: Project[] = [
     tradeoffs: [
       "Prioritized real-time clarity over exhaustive historical overlays",
     ],
+    image: "/dashboard-overview.png",
+    imageAlt: "Voice Security Dashboard overview screenshot",
     github: "https://github.com/malanianisha/voice-security-dashboard",
     featured: true,
   },
@@ -246,5 +248,7 @@ export const projects: Project[] = [
       "Data ingestion pipeline with API normalization",
       "Simple scoring model for viability",
     ],
+    image: "/Urban Utopia.png",
+    imageAlt: "Urban Utopia project screenshot",
   },
 ];

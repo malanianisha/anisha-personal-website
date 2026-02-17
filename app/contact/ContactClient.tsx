@@ -168,6 +168,14 @@ export default function ContactClient() {
                 </a>
                 <a
                   className="btn btn-secondary"
+                  href="https://www.figma.com/proto/IkIK1HDZjHaTpFxmNlYjXa/Anisha-Malani-Portfolio?node-id=2903-1369&t=J0dTM2CzPb9eu0ki-1"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Figma
+                </a>
+                <a
+                  className="btn btn-secondary"
                   href="https://github.com"
                   target="_blank"
                   rel="noreferrer"
