@@ -3,6 +3,7 @@ export type Artwork = {
   title: string;
   description?: string;
   image: string;
+  aspect?: string;
   year?: string;
   tags?: string[];
 };
@@ -25,8 +26,9 @@ export const artwork: Artwork[] = [
   {
     slug: "fragments",
     title: "Fragments",
-    description: "Layered forms that feel assembled, then gently undone.",
-    image: "/lion.JPG",
+    description:
+      "I created this painting using acrylic paints on a canvas. This painting was challenging as acrylic paints dry up really quickly. To show the watery effect, I had to use more water but thick paint to give a visible layer of color.",
+    image: "/buddha.png",
   },
   {
     slug: "winds-of-change",
@@ -38,15 +40,16 @@ export const artwork: Artwork[] = [
   {
     slug: "contours",
     title: "Contours",
-    description: "A study of edges, gradients, and quiet tension.",
-    image: "/scene.JPG",
+    description:
+      "This painting represents a rainy day in London. I created this using acrylic paints with a lot of water. The use of various brush strokes is very evident in the trees and while giving the watery effect.",
+    image: "/london.png",
   },
   {
-    slug: "poetry-in-motion",
-    title: "A Poetry in Motion",
+    slug: "lion",
+    title: "Lion",
     description:
-      "A tribute to Tamil Nadu’s classical dance Bharatanatyam, celebrating expression and form.",
-    image: "/bharat.jpg",
+      "This King of the Jungle was created using a mixed medium: colored pencils, soft pastels and acrylic paint. I started off by using soft pastels, but it kept smudging, so I used acrylic paints and colored pencils to highlight this art.",
+    image: "/lion.png",
   },
   {
     slug: "looking-beyond",
@@ -59,14 +62,22 @@ export const artwork: Artwork[] = [
     slug: "interlude",
     title: "Interlude",
     description:
-      "A rainy day in London painted with acrylics and water, highlighting expressive brushwork.",
-    image: "/LONDON.JPG",
+      "I created this piece using soft pastels. Soft Pastels are a very helpful technique of smudging and crumbling colors easily using your fingers, cotton or earbuds.",
+    image: "/cat.png",
   },
   {
     slug: "buddha",
     title: "Buddha",
     description:
-      "An acrylic study balancing thick paint with water to create a layered, luminous effect.",
-    image: "/buddha.JPG",
+      "A tribute to Tamil Nadu’s classical dance Bharatanatyam, celebrating expression and form.",
+    image: "/bharat.jpg",
+  },
+  {
+    slug: "tiger",
+    title: "Tiger",
+    description:
+      "While sketching this tiger, I used different HB pencils to give the appropriate shade where required. This sketch took a lot of precision and patience to give fine details on the face of the tiger.",
+    image: "/tiger.png",
+    aspect: "aspect-[16/9]",
   },
 ];

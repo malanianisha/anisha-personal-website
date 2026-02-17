@@ -23,7 +23,7 @@ export function ArtworkGrid({ items }: ArtworkGridProps) {
     <>
       <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
         {items.map((piece, idx) => {
-          const aspect = tileAspects[idx % tileAspects.length];
+          const aspect = piece.aspect ?? tileAspects[idx % tileAspects.length];
           return (
           <button
             key={piece.slug}
