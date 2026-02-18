@@ -96,6 +96,13 @@ export default function AboutPage() {
         <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <Reveal className="space-y-6">
             <p className="eyebrow">About</p>
+            <div className="space-y-1">
+              <p className="text-sm font-semibold text-foreground">Santa Clara University</p>
+              <p className="text-xs uppercase tracking-[0.18em] text-subtle">
+                Major: Web Design and Engineering · Minors: Graphic Design · Responsible Artificial Intelligence ·
+                Computer Science and Engineering
+              </p>
+            </div>
             <h1 className="headline text-4xl sm:text-5xl">Design-forward engineering.</h1>
             <p className="lede max-w-2xl">
               I’m Anisha, a Web Design & Engineering student focused on building product experiences that feel

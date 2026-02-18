@@ -69,6 +69,67 @@ export default function ProjectsClient() {
 
   const requestEmail = "malanianisha@gmail.com";
 
+  const getProjectImages = (project: Project) => {
+    if (project.images && project.images.length > 0) return project.images;
+    if (project.image) return [project.image];
+    return [];
+  };
+
+  const renderProjectMedia = (project: Project, index: number) => {
+    const images = getProjectImages(project);
+
+    if (images.length === 0) {
+      return (
+        <div className="flex h-44 items-center justify-center text-xs uppercase tracking-[0.3em] text-subtle">
+          Screenshot placeholder
+        </div>
+      );
+    }
+
+    if (images.length === 1) {
+      return (
+        <div className="relative aspect-[16/9]">
+          <Image
+            src={images[0]}
+            alt={project.imageAlt || `${project.name} screenshot`}
+            fill
+            className="object-cover transition duration-500 group-hover:scale-105"
+            sizes="(max-width: 860px) 100vw, 540px"
+            priority={index < 2}
+          />
+        </div>
+      );
+    }
+
+    const collage = images.slice(0, 3);
+    const columns = collage.length === 2 ? 2 : 3;
+    return (
+      <div className="relative aspect-[16/9]">
+        <div
+          className={`absolute inset-0 grid gap-2 p-2 ${
+            columns === 2 ? "grid-cols-2" : "grid-cols-3"
+          }`}
+        >
+          {collage.map((src, idx) => (
+            <div
+              key={src}
+              className="relative overflow-hidden rounded-2xl border border-border/60 bg-black/40 shadow-soft"
+            >
+              <Image
+                src={src}
+                alt={`${project.name} screen ${idx + 1}`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 860px) 100vw, 540px"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/45 via-black/0 to-transparent" />
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="bg-background">
       <Container className="section">
@@ -126,22 +187,7 @@ export default function ProjectsClient() {
                 className="card card-interactive group flex h-full flex-col text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 <div className="relative overflow-hidden rounded-t-2xl border-b border-border bg-background/70">
-                  {project.image ? (
-                    <div className="relative aspect-[16/9]">
-                      <Image
-                        src={project.image}
-                        alt={project.imageAlt || `${project.name} screenshot`}
-                        fill
-                        className="object-cover transition duration-500 group-hover:scale-105"
-                        sizes="(max-width: 860px) 100vw, 540px"
-                        priority={idx < 2}
-                      />
-                    </div>
-                  ) : (
-                    <div className="flex h-44 items-center justify-center text-xs uppercase tracking-[0.3em] text-subtle">
-                      Screenshot placeholder
-                    </div>
-                  )}
+                  {renderProjectMedia(project, idx)}
                   {project.github && (
                     <span className="absolute right-4 top-4 rounded-full bg-background/80 p-2 text-muted shadow-soft">
                       <Github className="h-4 w-4" />
@@ -223,15 +269,26 @@ export default function ProjectsClient() {
 
               <div className="grid gap-8 px-6 py-6 lg:grid-cols-[1.2fr_0.8fr]">
                 <div className="space-y-6">
-                  {activeProject.image && (
-                    <div className="relative aspect-[16/9] overflow-hidden rounded-xl border border-border">
-                      <Image
-                        src={activeProject.image}
-                        alt={activeProject.imageAlt || `${activeProject.name} screenshot`}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 900px) 100vw, 900px"
-                      />
+                  {getProjectImages(activeProject).length > 0 && (
+                    <div className="grid gap-3 md:grid-cols-2">
+                      {getProjectImages(activeProject).slice(0, 3).map((src, idx) => (
+                        <div
+                          key={src}
+                          className={`relative overflow-hidden rounded-xl border border-border ${
+                            idx === 2 ? "md:col-span-2" : ""
+                          }`}
+                        >
+                          <div className="relative aspect-[16/9]">
+                            <Image
+                              src={src}
+                              alt={`${activeProject.name} screen ${idx + 1}`}
+                              fill
+                              className="object-cover"
+                              sizes="(max-width: 900px) 100vw, 900px"
+                            />
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   )}
 

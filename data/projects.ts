@@ -24,6 +24,7 @@ export type Project = {
   metrics?: ProjectMetric[];
   image?: string;
   imageAlt?: string;
+  images?: string[];
   github?: string;
   demo?: string;
   featured?: boolean;
@@ -250,5 +251,47 @@ export const projects: Project[] = [
     ],
     image: "/Urban Utopia.png",
     imageAlt: "Urban Utopia project screenshot",
+  },
+  {
+    slug: "mind-in-motion",
+    name: "Mind in Motion",
+    summary:
+      "CruzHacks project: voice-first AI assistant for students built with Expo Go, Fastify, and MongoDB Atlas.",
+    impact:
+      "Enabled hands-free task management and class prep with a safety-first, voice-driven flow.",
+    role: "Full-stack + voice AI prototyping",
+    personalNotes: [
+      "Built at CruzHacks to explore voice-first productivity for students on the go.",
+      "Prioritized safety-first UX with Driving Mode and push-to-talk.",
+    ],
+    categories: ["Hackathon", "Full-Stack", "Data"],
+    stack: ["Expo Go", "Fastify", "MongoDB Atlas", "ElevenLabs", "Gemini"],
+    importanceRank: 7,
+    highlights: [
+      "Voice + manual task CRUD with urgency and due-date awareness",
+      "Syllabus ingestion from text/PDF to auto-create tasks",
+      "Driving Mode locks visual interactions above 85 mph with passenger override",
+    ],
+    problem:
+      "Students needed a safe, hands-free way to manage tasks and class prep while commuting.",
+    solution:
+      "Built a voice-first assistant with push-to-talk, syllabus intelligence, and class-aware Q&A.",
+    outcome:
+      "Delivered a working CruzHacks prototype that keeps students in a continuous voice-first planning loop.",
+    architecture: [
+      "Expo Go client with on-device guest profile",
+      "Fastify API with MongoDB Atlas for tasks and syllabus data",
+      "ElevenLabs STT/TTS + Gemini planning loop for responses",
+    ],
+    tradeoffs: [
+      "Used guest profiles instead of Google OAuth to reduce friction",
+      "Optimized for a hackathon demo over full offline support",
+    ],
+    images: [
+      "/mind-in-motion-1.png",
+      "/mind-in-motion-2.png",
+      "/mind-in-motion-3.png",
+    ],
+    github: "https://github.com/malanianisha/Mind-in-Motion-CH",
   },
 ];
